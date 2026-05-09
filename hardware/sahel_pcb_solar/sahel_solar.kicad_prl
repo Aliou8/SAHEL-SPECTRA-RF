@@ -118,18 +118,6 @@
           "size_x": 720,
           "size_y": 794
         }
-      },
-      {
-        "name": "sahel_solar.kicad_sch",
-        "open": false,
-        "window": {
-          "display": 0,
-          "maximized": true,
-          "pos_x": 720,
-          "pos_y": 40,
-          "size_x": 720,
-          "size_y": 794
-        }
       }
     ]
   },
