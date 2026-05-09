@@ -1,0 +1,4 @@
+(fp_lib_table
+	(version 7)
+	(lib (name "logo") (type "KiCad") (uri "/home/aliou/Documents/SAHEL-SPECTRA-RF/hardware/Lib_kicad/logo.pretty") (options "") (descr ""))
+)

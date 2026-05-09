@@ -1,0 +1,6 @@
+**/.vscode/**
+diagrammes/*
+docs/*
+**/**-backups/**
+build
+.vscode-ctags
