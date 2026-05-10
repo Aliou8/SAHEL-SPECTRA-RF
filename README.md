@@ -45,6 +45,16 @@ KiCad is used for the electronic design. The hardware is divided into three part
   </tr>
 </table>
 
+<table>
+  <tr>
+    <td align="center">
+      <img src="images/main_pcb.png" <br>
+      <b> Radio and OBC PCB  can be found in [directory](hardware/sahel_pcb_main/)</b>
+    </td>
+  </tr>
+</table>
+
+
 ---
 
 ##### Components
