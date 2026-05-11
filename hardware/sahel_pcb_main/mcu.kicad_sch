@@ -5698,10 +5698,6 @@
 		(uuid "55d03711-0d46-441c-92b1-aeb8d759d158")
 	)
 	(no_connect
-		(at 55.88 71.12)
-		(uuid "59916536-fdf2-47c3-86e1-13f2ac670e42")
-	)
-	(no_connect
 		(at 101.6 167.64)
 		(uuid "788ee169-f452-463c-ab4c-34ec24491c51")
 	)
@@ -7541,6 +7537,17 @@
 			(justify left)
 		)
 		(uuid "b43c7fea-bf2a-4527-832d-491ab7143d9b")
+	)
+	(hierarchical_label "Bat_Alert"
+		(shape input)
+		(at 55.88 71.12 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "b7794f15-bc36-4d29-81cd-42dce1f3c5f1")
 	)
 	(hierarchical_label "SPI1_MOSI"
 		(shape bidirectional)
