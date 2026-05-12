@@ -108,24 +108,24 @@
   "project": {
     "files": [
       {
-        "name": "sahel_battery.kicad_pcb",
-        "open": false,
-        "window": {
-          "display": 0,
-          "maximized": true,
-          "pos_x": 0,
-          "pos_y": 40,
-          "size_x": 720,
-          "size_y": 697
-        }
-      },
-      {
         "name": "sahel_battery.kicad_sch",
         "open": false,
         "window": {
           "display": 0,
           "maximized": true,
           "pos_x": 720,
+          "pos_y": 40,
+          "size_x": 720,
+          "size_y": 794
+        }
+      },
+      {
+        "name": "sahel_battery.kicad_pcb",
+        "open": false,
+        "window": {
+          "display": 0,
+          "maximized": true,
+          "pos_x": 0,
           "pos_y": 40,
           "size_x": 720,
           "size_y": 794
