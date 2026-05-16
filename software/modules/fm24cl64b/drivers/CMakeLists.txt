@@ -1,0 +1,1 @@
+add_subdirectory_ifdef(CONFIG_FRAM_FM24CL64B fm24cl64b)

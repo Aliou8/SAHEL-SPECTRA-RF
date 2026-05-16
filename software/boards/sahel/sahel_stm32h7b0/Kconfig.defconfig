@@ -1,0 +1,8 @@
+# Copyright (c) 2024 pollelsat
+# SPDX-License-Identifier: Apache-2.0
+
+if BOARD_SAHEL_STM32H7B0
+
+source "boards/common/usb/Kconfig.cdc_acm_serial.defconfig"
+
+endif # BOARD_SAHEL_STM32H7B0

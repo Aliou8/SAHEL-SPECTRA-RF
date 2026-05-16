@@ -1,0 +1,1 @@
+add_subdirectory_ifdef(CONFIG_BATP_BQ76907 bq76907)

@@ -1,0 +1,25 @@
+identifier: sahel_stm32h7b0
+name: Sahel PCB for CubeSat STM32H7B0
+type: mcu
+arch: arm
+toolchain:
+  - zephyr
+  - gnuarmemb
+ram: 1376
+flash: 128
+supported:
+  - gpio
+  - counter
+  - spi
+  - rtc
+  - watchdog
+  - fram
+  - qspi
+  - i2c
+  - uart
+  - fcan
+  - rs485/rs422
+  - temperature sensor
+  - i p v sensor
+  - 
+vendor: custom

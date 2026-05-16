@@ -1,0 +1,11 @@
+#Copyright (c) 2025 pollelsat
+#SPDX-License-Identifier: Apache-2.0
+
+
+config BATP_BQ76907
+    bool "BQ76907 I2C BATTERY PROTECTION"
+    default n
+    depends on DT_HAS_TI_BQ76907_ENABLED
+    select I2C
+    help
+      Enable BQ76907 I2C battery protection

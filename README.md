@@ -61,7 +61,7 @@ High-performance Arm Cortex-M7 MCU with DSP and DP-FPU, 128 KB Flash, 1,376 KB S
 
 ---
 
-###### FRAM — FM24C64C
+###### FRAM — FM24CL64B
 
 | Parameter        | Value            |
 |-----------------|------------------|
@@ -74,7 +74,7 @@ High-performance Arm Cortex-M7 MCU with DSP and DP-FPU, 128 KB Flash, 1,376 KB S
 ###### Sensors
 
 **Accelerometer, Gyroscope, and Magnetometer: LSM9DS1**  
-**Barometer: BMP390**
+**Barometer: BMP388**
 
 | Parameter            | Value        |
 |---------------------|-------------|
@@ -90,12 +90,12 @@ High-performance Arm Cortex-M7 MCU with DSP and DP-FPU, 128 KB Flash, 1,376 KB S
 
 ###### RTC & Temperature Sensor
 
-**RTC: RV-8523-C3**  
+**RTC: RV-8803-C7**  
 **TEMP: TMP100**
 
 | Parameter        | Value            |
 |-----------------|------------------|
-| RTC I2C Address  | `0b1101000`        |
+| RTC I2C Address  | `0b0110010`        |
 | TEMP I2C Address | `0b1001000`        |
 | SDA (I2C1)       | PB7              |
 | SCL (I2C1)       | PB6              |

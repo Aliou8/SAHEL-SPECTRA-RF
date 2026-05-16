@@ -63,7 +63,7 @@
           "min_clearance": 0.2,
           "min_island_area": 10.0,
           "min_thickness": 0.25,
-          "pad_connection": 1,
+          "pad_connection": 2,
           "remove_islands": 0,
           "thermal_relief_gap": 0.5,
           "thermal_relief_spoke_width": 0.5
@@ -734,7 +734,7 @@
         "uuid": "e6b0fa3d-63bc-4479-81e5-96b35e896538"
       }
     ],
-    "used_designators": "J103,BT101,TP101-129,TP201-202,TP301-310",
+    "used_designators": "U605-606,J103,BT101,TP101-129,TP201-202,TP301-310",
     "variants": []
   },
   "sheets": [

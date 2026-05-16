@@ -1,6 +1,6 @@
 {
   "board": {
-    "active_layer": 2,
+    "active_layer": 5,
     "active_layer_preset": "",
     "auto_track_width": true,
     "hidden_netclasses": [],
@@ -52,8 +52,8 @@
       "board_outline_area",
       "ly_points"
     ],
-    "visible_layers": "ffffffff_ffffffff_ffffffff_fff5ffef",
-    "zone_display_mode": 1
+    "visible_layers": "ffffffff_ffffffff_ffffffff_fff5ffff",
+    "zone_display_mode": 0
   },
   "git": {
     "integration_disabled": false,
@@ -112,8 +112,20 @@
   "project": {
     "files": [
       {
+        "name": "sahel_pcb.kicad_pcb",
+        "open": true,
+        "window": {
+          "display": 0,
+          "maximized": false,
+          "pos_x": 0,
+          "pos_y": 40,
+          "size_x": 720,
+          "size_y": 794
+        }
+      },
+      {
         "name": "sahel_pcb.kicad_sch",
-        "open": false,
+        "open": true,
         "window": {
           "display": 0,
           "maximized": true,
@@ -121,18 +133,6 @@
           "pos_y": 40,
           "size_x": 720,
           "size_y": 794
-        }
-      },
-      {
-        "name": "sahel_pcb.kicad_pcb",
-        "open": false,
-        "window": {
-          "display": 0,
-          "maximized": true,
-          "pos_x": 0,
-          "pos_y": 40,
-          "size_x": 720,
-          "size_y": 697
         }
       }
     ]

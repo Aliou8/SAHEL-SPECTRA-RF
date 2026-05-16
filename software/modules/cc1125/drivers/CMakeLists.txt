@@ -1,0 +1,1 @@
+add_subdirectory_ifdef(CONFIG_RADIO_CC1125 cc1125)

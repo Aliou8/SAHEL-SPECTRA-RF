@@ -1,0 +1,6 @@
+name: fm24cl64b
+build:
+  cmake: .
+  kconfig: Kconfig
+  settings:
+    dts_root: .

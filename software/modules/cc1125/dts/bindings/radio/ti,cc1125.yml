@@ -1,0 +1,43 @@
+#Copyright (c) 2026 pollelsat
+#SPDX-License-Identifier: Apache-2.0
+
+description: |
+  Ti CC1125 device is a fully integrated single-chip radio transceiver designed 
+  for high performance at very low-power and low-voltage operation in cost-effective 
+  wireless systems.
+
+include: spi-device.yaml
+
+compatible: "ti,cc1125"
+
+properties:
+  gpio0-gpios:
+    type: phandle-array
+    description: |
+      GPIOs connected to the GPIO0 pin of the transceiver.
+  gpio1-gpios:
+    type: phandle-array
+    description: |
+      GPIOs connected to the GPIO1 pin of the transceiver.
+  gpio2-gpios:
+    type: phandle-array
+    description: |
+      GPIOs connected to the GPIO2 pin of the transceiver.
+  gpio3-gpios:
+    type: phandle-array
+    description: |
+      GPIOs connected to the GPIO3 pin of the transceiver.
+  frequency:
+    type: int
+    description: |
+      The carrier frequency, in Hz.
+  datarate:
+    type: int
+    description: |
+      The datarate in symbol per second.
+  spi-max-frequency:
+    type: int
+    description: |
+      The maximum frequency supported by the transceiver.
+
+  
