@@ -1,18 +1,60 @@
-#Copyright (c) 2026 pollelsat
-#SPDX-License-Identifier: Apache-2.0
+# SPDX-License-Identifier: Apache-2.0
+# Copyright (c) 2026 pollelsat
 
 description: |
-  Texas Instruments BQ76907 battery protection
-  When setting the battery DTS properties, make sure to include
-  bq76907.h and use the macros defined there.
+  Texas Instruments BQ76907 battery monitor / protection AFE.
+
+  Provides:
+    - cell voltage monitoring
+    - current measurement (shunt-based)
+    - protection (OV/UV/OC/SC)
+    - ALERT interrupt signal
 
 compatible: "ti,bq76907"
 
-include: [sensor-device.yaml, i2c-device.yaml]
+include:
+  - name: i2c-device.yaml
+  - name: sensor-device.yaml
 
 properties:
   alert-gpios:
     type: phandle-array
     description: |
-      The alert pin signal defaults to active low open drain, so requires a
-      pull-up on the board.
+      ALERT output from BQ76907.
+      Open-drain, active-low. Requires pull-up.
+
+  overvoltage-threshold:
+    type: int
+    required: true
+    description: Over-voltage protection threshold in mV.
+
+  undervoltage-threshold:
+    type: int
+    required: true
+    description: Under-voltage protection threshold in mV.
+  overcurrent-in-charge-threshold:
+    type: int
+    required: true
+    description: Overcurrent in charge protection threshold in mA .
+  overcurrent-in-discharge1-threshold:
+    type: int
+    required: true
+    description: Overcurrent in decharge protection threshold in mA .
+  overcurrent-in-discharge2-threshold:
+    type: int
+    required: true
+    description: Overcurrent in decharge protection threshold in mA .
+
+  number-cell:
+    type: int
+    required: true
+    enum: [1, 2, 3, 4, 5, 6, 7]
+
+  rsense_mohms:
+    type: int
+    required: true
+    default: 0
+    description: |
+      Equivalent resistance of external voltage divider in milli-ohms (mΩ).
+      Used for scaling ADC voltage measurements.
+      Set to 0 if not used or measurement is internal to AFE.

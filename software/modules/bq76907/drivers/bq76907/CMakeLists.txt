@@ -6,3 +6,5 @@ zephyr_library()
 zephyr_library_sources(
     bq76907.c
 )
+
+zephyr_include_directories(.)

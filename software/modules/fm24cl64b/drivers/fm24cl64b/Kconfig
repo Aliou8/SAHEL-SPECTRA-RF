@@ -7,5 +7,6 @@ config FRAM_FM24CL64B
     default n
     depends on DT_HAS_INFINEON_FM24CL64B_ENABLED
     select I2C
+    select EEPROM
     help
       Enable FM24CL64B I2C FRAM
