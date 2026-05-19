@@ -7869,7 +7869,7 @@
 				)
 			)
 		)
-		(property "Value" "CC1125RHBT"
+		(property "Value" "CC1200"
 			(at 133.35 31.75 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7891,7 +7891,7 @@
 				(justify bottom)
 			)
 		)
-		(property "Datasheet" "https://www.ti.com/lit/ds/symlink/cc1125.pdf?ts=1775473058389&ref_url=https%253A%252F%252Fwww.google.com%252F"
+		(property "Datasheet" "http://www.ti.com/lit/ds/symlink/cc1200.pdf"
 			(at 133.35 102.87 0)
 			(hide yes)
 			(show_name no)
@@ -7950,7 +7950,7 @@
 				(justify bottom)
 			)
 		)
-		(property "SnapEDA_Link" "https://www.snapeda.com/parts/CC1125RHBT/Texas+Instruments/view-part/?ref=snap"
+		(property "SnapEDA_Link" "https://www.snapeda.com/parts/CC1200RHBT/Texas+Instruments/view-part/?ref=snap"
 			(at 133.35 102.87 0)
 			(hide yes)
 			(show_name no)
@@ -7962,7 +7962,7 @@
 				(justify bottom)
 			)
 		)
-		(property "MP" "CC1125RHBT"
+		(property "MP" "CC1200"
 			(at 133.35 102.87 0)
 			(hide yes)
 			(show_name no)
@@ -7974,7 +7974,7 @@
 				(justify bottom)
 			)
 		)
-		(property "Purchase-URL" "https://www.snapeda.com/api/url_track_click_mouser/?unipart_id=385290&manufacturer=Texas Instruments&part_name=CC1125RHBT&search_term=None"
+		(property "Purchase-URL" "https://www.snapeda.com/api/url_track_click_mouser/?unipart_id=385290&manufacturer=Texas Instruments&part_name=CC1200RHBT&search_term=None"
 			(at 133.35 102.87 0)
 			(hide yes)
 			(show_name no)
@@ -7998,7 +7998,7 @@
 				(justify bottom)
 			)
 		)
-		(property "Check_prices" "https://www.snapeda.com/parts/CC1125RHBT/Texas+Instruments/view-part/?ref=eda"
+		(property "Check_prices" "https://www.snapeda.com/parts/CC1200/Texas+Instruments/view-part/?ref=eda"
 			(at 133.35 102.87 0)
 			(hide yes)
 			(show_name no)
