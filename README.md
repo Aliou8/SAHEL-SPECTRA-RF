@@ -1,7 +1,7 @@
 # SAHEL-CUBESAT: An Experimental Educational CubeSat 
 # Project work in progress
 
-This project aims to develop a complete experimental CubeSat for educational purposes. It is based on an STM32H7 MCU for data handling and uses two CC1125 radios for communication. The software is developed using a Zephyr-like RTOS.
+This project aims to develop a complete experimental CubeSat for educational purposes. It is based on an STM32H7 MCU for data handling and uses two CC1200 radios for communication. The software is developed using a Zephyr-like RTOS.
 
 <table>  <tr>    <td align="center">      <img src="images/Squelette.png" width="250"><br>      <b>Mechanical Frame</b>    </td>    <td align="center">      <img src="images/Assemblage_Tr.png" width="250"><br>      <b>CubeSat Assembly with PCBs</b>    </td>    <td align="center">      <img src="images/Assemblage.png" width="250"><br>      <b>Complete CubeSat Assembly</b>    </td>  </tr></table>
 
@@ -124,9 +124,9 @@ High-performance Arm Cortex-M7 MCU with DSP and DP-FPU, 128 KB Flash, 1,376 KB S
 | UART2_EN    | PD4  |
 
 ---
-###### Radio Interface: CC1125
+###### Radio Interface: CC1200
 
-The CC1125 device is a fully integrated single-chip radio transceiver designed for high performance at very low-power and low-voltage operation in cost-effective wireless systems frequency bands at 164–192 MHz, 274–320 MHz, 410–480 MHz, and 820–960 MHz.
+The CC1200 device is a fully integrated single-chip radio transceiver designed for high performance at very low-power and low-voltage operation in cost-effective wireless systems frequency bands at 164–192 MHz, 274–320 MHz, 410–480 MHz, and 820–960 MHz.
 
 **UHF(TX/RX) 420-470 MHz**
 
@@ -221,16 +221,110 @@ The battery protection and monitoring system is based on the BQ76907 battery mon
 
 ## Software
 
-### System Logic
+The software is developed using **Zephyr RTOS**.  
+The middleware architecture is described in the [Software Documentation](software/README.md).
 
-...
+---
 
-### Implementation
+## System Logic
 
-...
+We are developing the system based on **Zephyr RTOS**, using a **multi-threaded architecture** combined with **Zephyr zbus** for internal communication.
+
+The application is structured around multiple independent threads that communicate through the **zbus message bus system**.
+
+### Key concepts:
+- Each module acts as a **zbus publisher and/or subscriber**
+- Data is exchanged through **well-defined channels**
+- This avoids tight coupling between components
+- Improves scalability and modularity of the system
+
+### Benefits of using zbus:
+- Decoupled architecture between threads
+- Clean publish/subscribe communication model
+- Easier debugging and tracing of data flow
+- Better maintainability for complex systems
 
 ---
 
 ## Ground Station Communication
 
-...
+The ground station software is **not yet implemented**.  
+The current plan is to develop it using either:
+- **Qt-based applications** (for a custom GUI control station)
+- or existing **SDR software tools** for signal reception and analysis
+
+---
+
+## Communication Mechanism
+
+The communication between the system and the ground station is designed around a structured and layered protocol stack.
+
+### 1. Physical & Link Layer
+The system uses the **AX.25 protocol** as the primary data link layer.
+
+AX.25 provides:
+- reliable packet framing
+- addressing capability (callsigns)
+- error detection (CRC)
+- compatibility with amateur radio / SDR systems
+
+---
+
+### 2. Packet Structure
+
+All exchanged data is encapsulated in AX.25 frames containing:
+- payload data
+- message type identifier
+- optional sequence number
+- checksum (handled by AX.25 layer)
+
+---
+
+### 3. Command System
+
+The ground station can send **commands** to the embedded system.
+
+Commands are structured as:
+- command ID
+- optional parameters
+- target module (if applicable)
+
+Examples of command types:
+- system control (start / stop / reset)
+- configuration update
+- request sensor data
+- debug / diagnostics requests
+
+---
+
+### 4. Internal Routing (zbus integration)
+
+Incoming and outgoing messages are bridged into the internal **zbus architecture**.
+
+Flow:
+- AX.25 frame received → decoded → converted to internal message
+- message published on **zbus channel**
+- relevant modules subscribe and react
+
+---
+
+### 5. Response System
+
+The system responds using structured messages:
+- ACK / NACK for command validation
+- telemetry data packets
+- event notifications
+- status reports
+
+All responses follow the same pipeline:
+**zbus → encoder → AX.25 → ground station**
+
+---
+
+### 6. Design Goals
+
+This architecture is designed to ensure:
+- robustness over noisy RF links
+- modular separation between communication and logic
+- easy integration with SDR tools
+- future compatibility with different ground station implementations
